@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    padding: 15px 25px;
+    background: pink;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: black;
+    border: none;
+    font-size: 25px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+span{
+    z-index: 1;
+    position: relative;
+
+}
+.btn::after{
+    content: '';
+ 
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    z-index: 0;
+    position: absolute;
+  
+    transition:width 0.8s, height 0.8s;
+    left: var(--xPostion);
+    top: var(--yPostion);
+    transform: translate(-50%, -50%);
+
+
+  
+}
+button:hover::after{
+    width: 350px;
+    height: 350px;
+    background: orangered;
+}
